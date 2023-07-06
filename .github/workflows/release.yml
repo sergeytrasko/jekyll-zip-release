@@ -16,12 +16,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: etup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-      - name: install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
+      - name: jekyll build
+        uses: mbursi/jekyll-build-only-action@v1.0.0
+#      - name: setup ruby
+#        uses: ruby/setup-ruby@v1
+#        with:
+#          ruby-version: 2.7
+#      - name: install dependencies & build site
+#        uses: limjh16/jekyll-action-ts@v2
 #      - name: Build with Jekyll
 #        uses: lemonarc/jekyll-action@1.0.0
       - name: Archive Release
