@@ -1,4 +1,7 @@
 title: Jekyll ZIP Release Showcase
-description: Example how to build and release Jekyll site to ZIP release
+tagline: Example how to build and release Jekyll site to ZIP release
+author.name: Sergey Trasko
+author.url: https://github.com/sergeytrasko
 google_analytics:
 theme: monophase
+baseurl: .

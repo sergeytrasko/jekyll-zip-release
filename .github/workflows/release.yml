@@ -1,14 +1,9 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Build Jekyll with and release as ZIP
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     tags:
       - '*'
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 jobs:
   build:
@@ -18,14 +13,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: jekyll build
+      - name: Jekyll build
         uses: mbursi/jekyll-build-only-action@v1.0.0
-      - name: Archive Release
+      - name: Create Release Archive
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: 'zip'
           filename: 'release.zip'
-          path: '_site'
+          path: '_site/'
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
