@@ -4,3 +4,5 @@ author.name: Sergey Trasko
 author.url: https://github.com/sergeytrasko
 google_analytics:
 theme: monophase
+plugins:
+  - jekyll-relative-links
